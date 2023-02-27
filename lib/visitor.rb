@@ -18,7 +18,7 @@ class Visitor
   end
 
   def tall_enough?
-    if height >= 54
+    if @height >= 54
       @tall_enough
     else @tall_enough == false
     end
