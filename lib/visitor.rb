@@ -2,7 +2,7 @@ class Visitor
   attr_reader :name,
               :height,
               :spending_money,
-              :preferences
+              :preferences,
               :tall_enough
 
   def initialize(name, height, spending_money)
@@ -23,4 +23,5 @@ class Visitor
     else @tall_enough == false
     end
   end
+
 end

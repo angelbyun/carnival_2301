@@ -8,6 +8,7 @@ RSpec.describe Visitor do
     expect(visitor1.name).to eq('Bruce')
     expect(visitor1.height).to eq(54)
     expect(visitor1.spending_money).to eq('$10')
+    expect(visitor1.rides).to eq([])
   end
 
   it 'can list an empty array of preferences' do

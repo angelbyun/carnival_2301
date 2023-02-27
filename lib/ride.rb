@@ -13,4 +13,20 @@ class Ride
     @total_revenue = 0
   end
  
+  def board_rider(visitor)
+    if @preferences == [:excitement]
+      board_rider
+    end
+  end
+
+  def rider_log
+    log = Hash.new
+    @rides.each do |ride|
+      log[ride] = []
+      @visitors.each do |visitor|
+        log[ride] << visitor if visitor.preferences == ride.excitement
+      end
+    end
+    log
+  end
 end
