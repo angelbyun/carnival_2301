@@ -48,6 +48,9 @@ RSpec.describe Ride do
     carnival.add_visitors(visitor1)
     carnival.add_visitors(visitor2)
 
-    expect(ride1.rider_log).to eq({ride1 => [visitor1, visitor2]})
+    ride1.board_rider(visitor1)
+    ride1.board_rider(visitor2)
+
+    expect(carnival.rider_log).to eq({ride1 => [visitor1, visitor2]})
   end
 end
